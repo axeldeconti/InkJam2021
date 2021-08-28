@@ -372,6 +372,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2169269943388735526, guid: 7cfe3188d74ce8a49ac7eb1dac8b332d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2169269943388735528, guid: 7cfe3188d74ce8a49ac7eb1dac8b332d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -380,6 +384,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2169269944317563956, guid: 7cfe3188d74ce8a49ac7eb1dac8b332d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2169269944317563958, guid: 7cfe3188d74ce8a49ac7eb1dac8b332d, type: 3}
       propertyPath: m_RootOrder
       value: 1
