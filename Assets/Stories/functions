@@ -1,0 +1,43 @@
+=== function theme_ok
+ ~ ideas = done_theme
+ ~ saw_theme = yes
+
+=== function memor_ok
+ ~ ideas = done_memor
+ ~ saw_memor = yes
+
+=== function feeli_ok
+  ~ ideas = done_feeli
+  ~ saw_memor = yes
+
+=== function visited(x)
+(x) {x<1}
+
+=== function get_back_from_park
+You head back to the street with in your mind the {word1()} of {word2()}.
+
+=== function word1
+{
+- ideas == done_theme:<>idea
+- else:
+    {
+    - ideas == done_memor:<>memory
+    - else:
+    {
+    - ideas == done_feeli:<>feeling
+}
+}
+}
+
+=== function word2
+{
+- ideas == done_theme:<>{theme} 
+- else:
+    {
+    - ideas == done_memor:<>{memor}
+    - else: 
+        {
+        - ideas == done_feeli:<>{feeli}
+}
+}
+}

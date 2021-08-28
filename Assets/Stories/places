@@ -1,0 +1,74 @@
+LIST ideas = done_theme, done_memor, done_feeli
+LIST saw_ideas = yes, (no)
+VAR saw_theme = no
+VAR saw_memor = no
+VAR saw_feeli = no
+
+
+===park===
+You walk {|back} into the park. The weather is nice, the wind blows through the trees. On the grass, people are playing a nice guitar tune. In the sky, a pair of birds is flying by. #loc[park]
+    * [Look at the trees]
+        The wind blowing in the tree reminds you to nature and brings up joyful memories about a lazy sunday you spent together.
+            ** {saw_theme == no} [Think about nature] #thm[nature]
+            
+            ~ theme = "nature"
+            ~ ideas = done_theme
+            ~ saw_theme = yes
+            
+            ** {saw_memor == no} [Remember the lazy sunday] #mem[sunday]
+            
+            ~ memor = "a lazy sunday"
+            ~ ideas = done_memor
+            ~ saw_memor = yes
+            
+            ** {saw_feeli == no} [Experience joy] #fel[joy]
+            
+            ~ feeli = "joy"
+            ~ ideas = done_feeli
+            ~ saw_feeli = yes
+            
+            -- {get_back_from_park()} -> hub
+            
+    * [Listen to the tune]
+        As you listen to the song the people are playing on the guitar, you feel culturally involved but the tune reminds you to a sad moment when you had to say goodbye.
+            ** {saw_theme == no} [Enjoy the song] #thm[culture]
+            
+            ~ theme = "culture"
+            {theme_ok()}
+            
+            ** {saw_memor == no} [Dive back into the memory] #mem[departure]
+            
+            ~ memor = "a separation"
+            {memor_ok()}
+            
+            ** {saw_feeli == no} [Focus on the sadness] #fel[sadness]
+            
+            ~ feeli = "sadness"
+            {feeli_ok()}
+            
+            -- {get_back_from_park()} -> hub
+            
+    * [Watch the birds fly]
+        While you follow with your eyes the birds flapping to the sun, you think about when you first encounter during a trip and this memory brings back a tender feeling.
+            ** {saw_theme == no} [Think about travel] #thm[travel]
+            
+            ~ theme = "travel"
+            {theme_ok()}
+            
+            ** {saw_memor == no} [Remember your first encounter] #mem[encounter]
+            
+            ~ memor = "your first encounter"
+            {memor_ok()}
+            
+            ** {saw_feeli == no} [Enjoy the warmth of this feeling] #fel[tenderness]
+            
+            -- {get_back_from_park()} -> hub
+            
+    + [Head back to the street]
+    You're not inspired by this place and decide to go elsewhere. -> hub
+
+//===bookshop===
+//The salesperson greets you {|again} as you enter the bookshop. Your eyes stops on different items, like a bird dictionary, a poster with a cat and a travel guide.
+
+//===museum===
+//The museum is {|still} very quiet. As you wander about, you can see some beautiful paintings and nice statues. Your eyes get caught by a visitor.
