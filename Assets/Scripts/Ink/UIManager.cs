@@ -20,7 +20,10 @@ public class UIManager : MonoBehaviour
 
     private Story _story;
 
-    List<string> _tags;
+    private List<string> _tags;
+
+    private int _hideButtonNumber = -1;
+
 
     private void Start()
     {
@@ -49,9 +52,13 @@ public class UIManager : MonoBehaviour
         HandleTags();
 
         _dialogueText.text = chunk;
+        int index = 0;
 
         foreach(Choice choice in _story.currentChoices)
         {
+            if (++index == _hideButtonNumber)
+                continue;
+
             ChoiceButton cb = Instantiate(_choiceButton, _buttonsParent);
             
             cb.Initialize(choice.text, () =>
@@ -76,6 +83,7 @@ public class UIManager : MonoBehaviour
 
     private void HandleTags()
     {
+        _hideButtonNumber = -1;
         _tags = _story.currentTags;
 
         if (_tags.Count == 0)
@@ -88,7 +96,26 @@ public class UIManager : MonoBehaviour
             switch (split[0])
             { 
                 case "speaker":
+                    Debug.Log(split[0]);
                     _speakerNameText.text = split[1];
+                    break;
+                case "loc":
+                    Debug.Log(split[0]);
+                    Debug.Log(split[1]);
+                    break;
+                case "thm":
+                    Debug.Log(split[0]);
+                    break;
+                case "fel":
+                    Debug.Log(split[0]);
+                    break;
+                case "mem":
+                    Debug.Log(split[0]);
+                    break;
+                case "hide":
+                    Debug.Log(split[0]);
+                    Debug.Log(split[1]);
+                    _hideButtonNumber = int.Parse(split[1]);
                     break;
                 default:
                     return;
