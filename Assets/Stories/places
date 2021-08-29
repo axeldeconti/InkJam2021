@@ -12,7 +12,7 @@ VAR saw_feeli = no
 
 
 ===park===
-You walk {|back} into the park. The weather is nice, the wind blows through the trees. On the grass, people are playing a nice guitar tune. In the sky, a pair of birds is flying by. #loc[park] #hide[4]
+You walk {|back} into the park. The weather is nice, the wind blows through the trees. On the grass, people are playing a nice guitar tune. In the sky, a pair of birds is flying by. #loc[park] #hub[4]
     * [Look at the trees]
         The wind blowing in the tree reminds you to nature and brings up joyful memories about a lazy sunday you spent together.
             ** {saw_theme == no} [Think about nature] 

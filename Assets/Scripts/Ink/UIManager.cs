@@ -14,19 +14,25 @@ public class UIManager : MonoBehaviour
 
     [Header("Parents")]
     [SerializeField] private Transform _buttonsParent;
+    [SerializeField] private Transform _hubParent;
 
     [Header("Prefabs")]
     [SerializeField] private ChoiceButton _choiceButton;
+    [SerializeField] private HubButton _hubButton;
 
     private Story _story;
 
     private List<string> _tags;
 
-    private int _hideButtonNumber = -1;
+    private LocationManager _loc;
+    private int _hubButtonNumber = -1;
+    private HubButton _hb = null;
 
 
     private void Start()
     {
+        _loc = GetComponent<LocationManager>();
+
         _story = new Story(_inkJSON.text);
 
         UpdateUI();
@@ -41,6 +47,9 @@ public class UIManager : MonoBehaviour
         {
             Destroy(_buttonsParent.GetChild(i).gameObject);
         }
+
+        if (_hubParent.childCount > 0)
+            Destroy(_hubParent.GetChild(0).gameObject);
     }
 
     private void UpdateUI()
@@ -56,8 +65,19 @@ public class UIManager : MonoBehaviour
 
         foreach(Choice choice in _story.currentChoices)
         {
-            if (++index == _hideButtonNumber)
+            if (++index == _hubButtonNumber)
+            {
+                HubButton _hb = Instantiate(_hubButton, _hubParent);
+
+                _hb.Initialize(() =>
+                {
+                    _story.ChooseChoiceIndex(choice.index);
+                    Debug.Log("Go back to hub " + choice.index);
+                    UpdateUI();
+                });
+
                 continue;
+            }
 
             ChoiceButton cb = Instantiate(_choiceButton, _buttonsParent);
             
@@ -83,7 +103,7 @@ public class UIManager : MonoBehaviour
 
     private void HandleTags()
     {
-        _hideButtonNumber = -1;
+        _hubButtonNumber = -1;
         _tags = _story.currentTags;
 
         if (_tags.Count == 0)
@@ -100,8 +120,7 @@ public class UIManager : MonoBehaviour
                     _speakerNameText.text = split[1];
                     break;
                 case "loc":
-                    Debug.Log(split[0]);
-                    Debug.Log(split[1]);
+                    _loc.ChangeLocation(split[1]);
                     break;
                 case "thm":
                     Debug.Log(split[0]);
@@ -112,10 +131,9 @@ public class UIManager : MonoBehaviour
                 case "mem":
                     Debug.Log(split[0]);
                     break;
-                case "hide":
-                    Debug.Log(split[0]);
-                    Debug.Log(split[1]);
-                    _hideButtonNumber = int.Parse(split[1]);
+                case "hub":
+                    _hubButtonNumber = int.Parse(split[1]);
+                    Debug.Log("Hub button on " + _hubButtonNumber);
                     break;
                 default:
                     return;
