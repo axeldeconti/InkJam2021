@@ -1,5 +1,11 @@
 LIST ideas = done_theme, done_memor, done_feeli
+
+LIST type_feeli = joy, sadness, tenderness
+
+LIST type_memor = sunday, departure, encounter
+
 LIST saw_ideas = yes, (no)
+
 VAR saw_theme = no
 VAR saw_memor = no
 VAR saw_feeli = no
@@ -9,58 +15,73 @@ VAR saw_feeli = no
 You walk {|back} into the park. The weather is nice, the wind blows through the trees. On the grass, people are playing a nice guitar tune. In the sky, a pair of birds is flying by. #loc[park] #hide[4]
     * [Look at the trees]
         The wind blowing in the tree reminds you to nature and brings up joyful memories about a lazy sunday you spent together.
-            ** {saw_theme == no} [Think about nature] #thm[nature]
+            ** {saw_theme == no} [Think about nature] 
             
             ~ theme = "nature"
             {theme_ok()}
+            #thm[nature]
             
-            ** {saw_memor == no} [Remember the lazy sunday] #mem[sunday]
+            ** {saw_memor == no} [Remember the lazy sunday]
             
             ~ memor = "a lazy sunday"
+            ~ type_memor = sunday
             {memor_ok()}
+            #mem[sunday]
             
-            ** {saw_feeli == no} [Experience joy] #fel[joy]
+            ** {saw_feeli == no} [Experience joy]
             
             ~ feeli = "joy"
+            ~ type_feeli = joy
             {feeli_ok()}
+            #fel[joy]
             
             -- {get_back_from_park()} -> hub
             
     * [Listen to the tune]
         As you listen to the song the people are playing on the guitar, you feel culturally involved but the tune reminds you to a sad moment when you had to say goodbye.
-            ** {saw_theme == no} [Enjoy the song] #thm[culture]
+            ** {saw_theme == no} [Enjoy the song]
             
             ~ theme = "culture"
             {theme_ok()}
+            #thm[culture]
             
-            ** {saw_memor == no} [Dive back into the memory] #mem[departure]
+            ** {saw_memor == no} [Dive back into the memory]
             
             ~ memor = "a separation"
+            ~ type_memor = departure
             {memor_ok()}
+            #mem[departure]
             
-            ** {saw_feeli == no} [Focus on the sadness] #fel[sadness]
+            ** {saw_feeli == no} [Focus on the sadness]
             
             ~ feeli = "sadness"
+            ~ type_feeli = sadness
             {feeli_ok()}
+            #fel[sadness]
             
             -- {get_back_from_park()} -> hub
             
     * [Watch the birds fly]
         While you follow with your eyes the birds flapping to the sun, you think about when you first encounter during a trip and this memory brings back a tender feeling.
-            ** {saw_theme == no} [Think about travel] #thm[travel]
+            ** {saw_theme == no} [Think about travel]
             
             ~ theme = "travel"
             {theme_ok()}
+            #thm[travel]
             
-            ** {saw_memor == no} [Remember your first encounter] #mem[encounter]
+            ** {saw_memor == no} [Remember your first encounter]
             
             ~ memor = "your first encounter"
+            ~ type_memor = encounter
             {memor_ok()}
+            #mem[encounter]
             
-            ** {saw_feeli == no} [Enjoy the warmth of this feeling] #fel[tenderness]
+            ** {saw_feeli == no} [Enjoy the warmth of this feeling]
             
             ~ feeli = "tenderness"
+            ~ type_feeli = tenderness
             {feeli_ok()}
+            #fel[tenderness]
             
             -- {get_back_from_park()} -> hub
             
@@ -68,123 +89,153 @@ You walk {|back} into the park. The weather is nice, the wind blows through the 
     You're not inspired by this place and decide to go elsewhere. -> hub
 
 ===bookshop===
-The salesperson greets you {|again} as you enter the bookshop. Your eyes stops on different items, like a bird dictionary, a poster with a cat and a travel guide. #loc[bookshop]
+The salesperson greets you {|again} as you enter the bookshop. Your eyes stops on different items, like a bird dictionary, a poster with a cat and a travel guide. #loc[bookshop] #hide[4]
     * [Pick up the dictionary] 
         On the cover of the dictionary you can see a golden eagle taking off. This powerful natural scene brings to your mind the time you first met, and a bit of nostalgia.
-            ** {saw_theme == no} [Think about the mighty eagle] #thm[nature]
+            ** {saw_theme == no} [Think about the mighty eagle]
         
             ~ theme = "nature"
             {theme_ok()}
+            #thm[nature]
         
-            ** {saw_memor == no} [Remember when you first met] #mem[encounter]
+            ** {saw_memor == no} [Remember when you first met]
         
             ~ memor = "your first encounter"
+            ~ type_memor = encounter
             {memor_ok()}
+            #mem[encounter]
         
-            ** {saw_feeli == no} [Plunge into nostalgia] #fel[sadness]
+            ** {saw_feeli == no} [Plunge into nostalgia]
         
             ~ feeli = "nostalgia"
+            ~ type_feeli = sadness
             {feeli_ok()}
+            #fel[sadness]
         
             -- {get_back_from_bookshop()} -> hub
         
     * [Look at the poster]
         The poster shows a cat napping cuddled up to a person reading a book on a couch. This cosy scene reminds you of a lazy sunday you spent together and fills you with tenderness.
-            ** {saw_theme == no} [Think about reading] #thm[culture]
+            ** {saw_theme == no} [Think about reading]
         
             ~ theme = "culture"
             {theme_ok()}
+            #thm[culture]
         
-            ** {saw_memor == no} [Recall the lazy sunday] #mem[sunday]
+            ** {saw_memor == no} [Recall the lazy sunday]
         
             ~ memor = "a lazy sunday"
+            ~ type_memor = sunday
             {memor_ok()}
+            #mem[sunday]
         
-            ** {saw_feeli == no} [Get engrossed in tenderness] #fel[tenderness]
+            ** {saw_feeli == no} [Get engrossed in tenderness]
         
             ~ feeli = "tenderness"
+            ~ type_feeli = tenderness
             {feeli_ok()}
+            #fel[tenderness]
         
             -- {get_back_from_bookshop()} -> hub
     
     * [Flip through the travel guide]
         The travel guide lead you through a country you two already visited. Seeing all these pictures of remote places you've been brings you to this travel and how happy you two felt.
-            ** {saw_theme == no} [Dream about traveling] #thm[travel]
+            ** {saw_theme == no} [Dream about traveling]
         
             ~ theme = "travel"
             {theme_ok()}
+            #thm[travel]
         
-            ** {saw_memor == no} [Remember the day you left] #mem[departure]
+            ** {saw_memor == no} [Remember the day you left]
         
             ~ memor = "a departure"
+            ~ type_memor = departure
             {memor_ok()}
+            #mem[departure]
         
-            ** {saw_feeli == no} [Focus on the joy you felt] #fel[joy]
+            ** {saw_feeli == no} [Focus on the joy you felt]
         
             ~ feeli = "joy"
+            ~ type_feeli = joy
             {feeli_ok()}
+            #fel[joy]
         
             -- {get_back_from_bookshop()} -> hub
     
     + [Head back to the street]
     You're not inspired by this place and decide to go elsewhere. -> hub
 ===museum===
-The museum is {|still} very quiet. As you wander about, you can see some beautiful paintings and nice statues. Your eyes get caught by a visitor. #loc[museum]
+The museum is {|still} very quiet. As you wander about, you can see some beautiful paintings and nice statues. Your eyes get caught by a visitor. #loc[museum] #hide[4]
     * [Gaze at the paintings]
         On one of the paintings you can see natural landscapes with some people stepping on a boat. It reminds you of when you had to take a train early and brings back all the tenderness of that time.
     
-            ** {saw_theme == no} [Plunge into the beauty of the trees] #thm[nature]
+            ** {saw_theme == no} [Plunge into the beauty of the trees]
         
             ~ theme = "nature"
             {theme_ok()}
+            #thm[nature]
         
-            ** {saw_memor == no} [Remember the early departure] #mem[departure]
+            ** {saw_memor == no} [Remember the early departure]
         
             ~ memor = "your departure to a new life"
+            ~ type_memor = departure
             {memor_ok()}
+            #mem[departure]
         
-            ** {saw_feeli == no} [Feel again tenderness] #fel[tenderness]
+            ** {saw_feeli == no} [Feel again tenderness]
         
             ~ feeli = "tenderness"
+            ~ type_feeli = "tenderness"
             {feeli_ok()}
+            #fel[tenderness]
         
             -- {get_back_from_museum()} -> hub
         
     * [Admire the statues]
         Your eyes stop at a statue of two characters hugging. This fine piece of art brings you back to the day you first met and fills you with joy.
-            ** {saw_theme == no} [Think about art] #thm[culture]
+            ** {saw_theme == no} [Think about art]
         
             ~ theme = "culture"
             {theme_ok()}
+            #thm[culture]
         
-            ** {saw_memor == no} [Remember the day you met] #mem[encounter]
+            ** {saw_memor == no} [Remember the day you met]
         
             ~ memor = "your first encounter"
+            ~ type_memor = encounter
             {memor_ok()}
+            #mem[encounter]
         
-            ** {saw_feeli == no} [Experience that joy again] #fel[joy]
+            ** {saw_feeli == no} [Experience that joy again]
         
             ~ feeli = "joy"
+            ~ type_feeli = joy
             {feeli_ok()}
+            #fel[joy]
         
             -- {get_back_from_museum()} -> hub
     
     * [Look at the visitor]
         In front of a painting, you can see an old visitor sitting on a bench, absorbed in the look of a sad scene. The person looks like a traveler and reminds you of your lonely sunday walks.
-            ** {saw_theme == no} [Imagine their trip] #thm[travel]
+            ** {saw_theme == no} [Imagine their trip]
         
             ~ theme = "travel"
             {theme_ok()}
+            #thm[travel]
         
-            ** {saw_memor == no} [Remember one of these sundays] #mem[sunday]
+            ** {saw_memor == no} [Remember one of these sundays]
         
             ~ memor = "a lazy sunday"
+            ~ type_memor = sunday
             {memor_ok()}
+            #mem[sunday]
         
-            ** {saw_feeli == no} [Share the visitor's sadness] #fel[sadness]
+            ** {saw_feeli == no} [Share the visitor's sadness]
         
             ~ feeli = "sadness"
+            ~ type_feeli = sadness
             {feeli_ok()}
+            #fel[sadness]
         
             -- {get_back_from_museum()} -> hub
     
