@@ -8,7 +8,7 @@
 
 === function feeli_ok
   ~ ideas = done_feeli
-  ~ saw_memor = yes
+  ~ saw_feeli = yes
 
 === function visited(x)
 (x) {x<1}
