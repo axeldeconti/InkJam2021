@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,14 +9,15 @@ public class LocationManager : MonoBehaviour
     [SerializeField] private Image _blur;
 
     [Header("Sprites")]
-    [SerializeField] private Sprite _street;
-    [SerializeField] private Sprite _museum;
-    [SerializeField] private Sprite _park;
-    [SerializeField] private Sprite _bookshop;
+    [SerializeField] private Location _street;
+    [SerializeField] private Location _museum;
+    [SerializeField] private Location _park;
+    [SerializeField] private Location _bookshop;
 
     private void Start()
     {
-        _background.sprite = _street;
+        _background.sprite = _street.sprite;
+        Instantiate(_street.prefabs, _background.transform);
         _blur.gameObject.SetActive(false);
     }
 
@@ -23,22 +25,37 @@ public class LocationManager : MonoBehaviour
     {
         Debug.Log("Change to location " + loc);
 
+        if (_background.transform.childCount > 0)
+            Destroy(_background.transform.GetChild(0).gameObject);
+
         switch (loc)
         {
             case "street":
-                _background.sprite = _street;
+                _background.sprite = _street.sprite;
+                Instantiate(_street.prefabs, _background.transform);
                 break;
             case "museum":
-                _background.sprite = _museum;
+                _background.sprite = _museum.sprite;
+                Instantiate(_museum.prefabs, _background.transform);
                 break;
             case "park":
-                _background.sprite = _park;
+                _background.sprite = _park.sprite;
+                Instantiate(_park.prefabs, _background.transform);
                 break;
             case "bookshop":
-                _background.sprite = _bookshop;
+                _background.sprite = _bookshop.sprite;
+                Instantiate(_bookshop.prefabs, _background.transform);
                 break;
             default:
                 return;
         }
     }
+}
+
+[Serializable]
+public struct Location
+{
+    public Sprite sprite;
+    public AudioClip clip;
+    public GameObject prefabs;
 }

@@ -10,7 +10,6 @@ public class UIManager : MonoBehaviour
 
     [Header("Texts")]
     [SerializeField] private TextMeshProUGUI _dialogueText;
-    [SerializeField] private TextMeshProUGUI _speakerNameText;
 
     [Header("Parents")]
     [SerializeField] private Transform _buttonsParent;
@@ -41,7 +40,6 @@ public class UIManager : MonoBehaviour
     private void ClearUI()
     {
         _dialogueText.text = "";
-        _speakerNameText.text = "";
 
         for (int i = 0; i < _buttonsParent.childCount; i++)
         {
@@ -114,22 +112,18 @@ public class UIManager : MonoBehaviour
             string[] split = t.Split('[', ']');
 
             switch (split[0])
-            { 
-                case "speaker":
-                    Debug.Log(split[0]);
-                    _speakerNameText.text = split[1];
-                    break;
+            {
                 case "loc":
                     _loc.ChangeLocation(split[1]);
                     break;
                 case "thm":
-                    Debug.Log(split[0]);
+                    Debug.Log(split[0] + " - " + split[1]);
                     break;
                 case "fel":
-                    Debug.Log(split[0]);
+                    Debug.Log(split[0] + " - " + split[1]);
                     break;
                 case "mem":
-                    Debug.Log(split[0]);
+                    Debug.Log(split[0] + " - " + split[1]);
                     break;
                 case "hub":
                     _hubButtonNumber = int.Parse(split[1]);
