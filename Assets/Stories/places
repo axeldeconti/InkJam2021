@@ -15,7 +15,7 @@ VAR saw_feeli = no
 You walk {|back} into the park. The weather is nice, the wind blows through the trees. On the grass, people are playing a nice guitar tune. In the sky, a pair of birds is flying by. #loc[park]
 -> park2
 ===park2===
-#hide[4]
+#hub
     * [Look at the trees]
         The wind blowing in the tree reminds you to nature and brings up joyful memories about a lazy sunday you spent together.
             ** {saw_theme == no} [Think about nature] 
@@ -185,7 +185,7 @@ The salesperson greets you {|again} as you enter the bookshop. Your eyes stops o
 The museum is {|still} very quiet. As you wander about, you can see some beautiful paintings and nice statues. Your eyes get caught by a visitor. #loc[museum]
 -> museum2
 ===museum2===
-#hide[4]
+#hub
     * [Gaze at the paintings]
         On one of the paintings you can see natural landscapes with some people stepping on a boat. It reminds you of when you had to take a train early and brings back all the tenderness of that time.
     
