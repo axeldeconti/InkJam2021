@@ -63,117 +63,117 @@ You feel like listening some {concert()}.
 
 === function song
 {
-- type_memor == sunday:<>cozy
+- type_memor == sunday:<>cozy#cozy
 - else:
     {
-    - type_memor == departure:<>dreamy
+    - type_memor == departure:<>dreamy#dreamy
     - else:
         {
-        - type_memor == encounter:<>nostalgic
+        - type_memor == encounter:<>nostalgic#nostalgic
 }
 }
 }
 
 === function poem
 {
-- type_memor == sunday:<>snow
+- type_memor == sunday:<>snow#snow
 - else:
     {
-    - type_memor == departure:<>rain
+    - type_memor == departure:<>rain#rain
     - else:
         {
-        - type_memor == encounter:<>clouds
+        - type_memor == encounter:<>clouds#clouds
 }
 }
 }
 
 === function cook
 {
-- type_memor == sunday:<>pancakes
+- type_memor == sunday:<>pancakes#pancakes
 - else:
     {
-    - type_memor == departure:<>sushi
+    - type_memor == departure:<>sushi#sushi
     - else:
         {
-        - type_memor == encounter:<>hamburger
+        - type_memor == encounter:<>hamburger#hamburger
 }
 }
 }
 
 === function CD
 {
-- type_memor == sunday:<>concept album
+- type_memor == sunday:<>concept album#concept_album
 - else:
     {
-    - type_memor == departure:<>greatest hits album
+    - type_memor == departure:<>greatest hits album#greatest_hits
     - else:
         {
-        - type_memor == encounter:<>Musical record
+        - type_memor == encounter:<>Musical record#musical_record
 }
 }
 }
 
 === function book
 {
-- type_memor == sunday:<>thrillers
+- type_memor == sunday:<>thrillers#thriller
 - else:
     {
-    - type_memor == departure:<>fantasy
+    - type_memor == departure:<>fantasy#fantasy
     - else:
         {
-        - type_memor == encounter:<>poetry
+        - type_memor == encounter:<>poetry#poetry
 }
 }
 }
 
 === function animal
 {
-- type_memor == sunday:<>shark
+- type_memor == sunday:<>shark#shark
 - else:
     {
-    - type_memor == departure:<>giraffe
+    - type_memor == departure:<>giraffe#giraffe
     - else:
         {
-        - type_memor == encounter:<>bear
+        - type_memor == encounter:<>bear#bear
 }
 }
 }
 
 === function concert
 {
-- type_memor == sunday:<>folk music
+- type_memor == sunday:<>folk music#folk_music
 - else:
     {
-    - type_memor == departure:<>pop rock
+    - type_memor == departure:<>pop rock#pop_rock
     - else:
         {
-        - type_memor == encounter:<>musical
+        - type_memor == encounter:<>musical#musical_concert
 }
 }
 }
 
 === function restaurant
 {
-- type_memor == sunday:<>brunch
+- type_memor == sunday:<>brunch#brunch
 - else:
     {
-    - type_memor == departure:<>lunch
+    - type_memor == departure:<>lunch#lunch
     - else:
         {
-        - type_memor == encounter:<>dinner
+        - type_memor == encounter:<>dinner#dinner
 }
 }
 }
 
 === function trip
 {
-- type_memor == sunday:<>somewhere quiet
+- type_memor == sunday:<>somewhere quiet#somewhere_quiet
 - else:
     {
-    - type_memor == departure:<>somewhere exciting
+    - type_memor == departure:<>somewhere exciting#somewhere_exciting
     - else:
         {
-        - type_memor == encounter:<>somewhere romantic
+        - type_memor == encounter:<>somewhere romantic#somewhere_romantic
 }
 }
 }
