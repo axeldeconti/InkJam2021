@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using Ink.Runtime;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -40,6 +41,12 @@ public class UIManager : MonoBehaviour
         _story = new Story(_inkJSON.text);
 
         UpdateUI();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene("Menu");
     }
 
     private void ClearUI()
