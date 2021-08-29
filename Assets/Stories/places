@@ -12,7 +12,10 @@ VAR saw_feeli = no
 
 
 ===park===
-You walk {|back} into the park. The weather is nice, the wind blows through the trees. On the grass, people are playing a nice guitar tune. In the sky, a pair of birds is flying by. #loc[park] #hub[4]
+You walk {|back} into the park. The weather is nice, the wind blows through the trees. On the grass, people are playing a nice guitar tune. In the sky, a pair of birds is flying by. #loc[park]
+-> park2
+===park2===
+#hide[4]
     * [Look at the trees]
         The wind blowing in the tree reminds you to nature and brings up joyful memories about a lazy sunday you spent together.
             ** {saw_theme == no} [Think about nature] 
@@ -36,6 +39,8 @@ You walk {|back} into the park. The weather is nice, the wind blows through the 
             #fel[joy]
             
             -- {get_back_from_park()} -> hub
+            
+            ++ [Look at something else] -> park2
             
     * [Listen to the tune]
         As you listen to the song the people are playing on the guitar, you feel culturally involved but the tune reminds you to a sad moment when you had to say goodbye.
@@ -61,6 +66,8 @@ You walk {|back} into the park. The weather is nice, the wind blows through the 
             
             -- {get_back_from_park()} -> hub
             
+            ++ [Stop listening] -> park2
+            
     * [Watch the birds fly]
         While you follow with your eyes the birds flapping to the sun, you think about when you first encounter during a trip and this memory brings back a tender feeling.
             ** {saw_theme == no} [Think about travel]
@@ -85,11 +92,15 @@ You walk {|back} into the park. The weather is nice, the wind blows through the 
             
             -- {get_back_from_park()} -> hub
             
+            ++ [Watch something else] -> park2
+            
     + [Head back to the street]
     You're not inspired by this place and decide to go elsewhere. -> hub
 
 ===bookshop===
-The salesperson greets you {|again} as you enter the bookshop. Your eyes stops on different items, like a bird dictionary, a poster with a cat and a travel guide. #loc[bookshop] #hide[4]
+The salesperson greets you {|again} as you enter the bookshop. Your eyes stops on different items, like a bird dictionary, a poster with a cat and a travel guide. #loc[bookshop]
+-> bookshop2
+===bookshop2===
     * [Pick up the dictionary] 
         On the cover of the dictionary you can see a golden eagle taking off. This powerful natural scene brings to your mind the time you first met, and a bit of nostalgia.
             ** {saw_theme == no} [Think about the mighty eagle]
@@ -113,6 +124,8 @@ The salesperson greets you {|again} as you enter the bookshop. Your eyes stops o
             #fel[sadness]
         
             -- {get_back_from_bookshop()} -> hub
+        
+        ++ [Put the dictionary down] -> bookshop2
         
     * [Look at the poster]
         The poster shows a cat napping cuddled up to a person reading a book on a couch. This cosy scene reminds you of a lazy sunday you spent together and fills you with tenderness.
@@ -138,6 +151,8 @@ The salesperson greets you {|again} as you enter the bookshop. Your eyes stops o
         
             -- {get_back_from_bookshop()} -> hub
     
+            ++ [Look at something else] -> bookshop2
+    
     * [Flip through the travel guide]
         The travel guide lead you through a country you two already visited. Seeing all these pictures of remote places you've been brings you to this travel and how happy you two felt.
             ** {saw_theme == no} [Dream about traveling]
@@ -162,10 +177,15 @@ The salesperson greets you {|again} as you enter the bookshop. Your eyes stops o
         
             -- {get_back_from_bookshop()} -> hub
     
+            ++ [Put the book back] -> bookshop2
+    
     + [Head back to the street]
     You're not inspired by this place and decide to go elsewhere. -> hub
 ===museum===
-The museum is {|still} very quiet. As you wander about, you can see some beautiful paintings and nice statues. Your eyes get caught by a visitor. #loc[museum] #hide[4]
+The museum is {|still} very quiet. As you wander about, you can see some beautiful paintings and nice statues. Your eyes get caught by a visitor. #loc[museum]
+-> museum2
+===museum2===
+#hide[4]
     * [Gaze at the paintings]
         On one of the paintings you can see natural landscapes with some people stepping on a boat. It reminds you of when you had to take a train early and brings back all the tenderness of that time.
     
@@ -191,6 +211,8 @@ The museum is {|still} very quiet. As you wander about, you can see some beautif
         
             -- {get_back_from_museum()} -> hub
         
+            ++ [Look at something else] -> museum2
+        
     * [Admire the statues]
         Your eyes stop at a statue of two characters hugging. This fine piece of art brings you back to the day you first met and fills you with joy.
             ** {saw_theme == no} [Think about art]
@@ -215,6 +237,8 @@ The museum is {|still} very quiet. As you wander about, you can see some beautif
         
             -- {get_back_from_museum()} -> hub
     
+            ++ [Keep on visiting] -> museum2
+    
     * [Look at the visitor]
         In front of a painting, you can see an old visitor sitting on a bench, absorbed in the look of a sad scene. The person looks like a traveler and reminds you of your lonely sunday walks.
             ** {saw_theme == no} [Imagine their trip]
@@ -238,6 +262,8 @@ The museum is {|still} very quiet. As you wander about, you can see some beautif
             #fel[sadness]
         
             -- {get_back_from_museum()} -> hub
+    
+            ++ [Leave them alone] -> museum2
     
     + [Head back to the street]
     You're not inspired by this place and decide to go elsewhere. -> hub
