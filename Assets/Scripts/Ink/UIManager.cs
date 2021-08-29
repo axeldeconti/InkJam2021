@@ -14,18 +14,23 @@ public class UIManager : MonoBehaviour
     [Header("Parents")]
     [SerializeField] private Transform _buttonsParent;
     [SerializeField] private Transform _hubParent;
+    [SerializeField] private Transform _mumParent;
 
     [Header("Prefabs")]
     [SerializeField] private ChoiceButton _choiceButton;
     [SerializeField] private HubButton _hubButton;
+    [SerializeField] private ChoiceButton _mumButton;
 
     private Story _story;
 
     private List<string> _tags;
 
     private LocationManager _loc;
+
     private int _hubButtonNumber = -1;
     private HubButton _hb = null;
+    private int _mumButtonNumber = -1;
+    private ChoiceButton _mumb = null;
 
 
     private void Start()
@@ -48,6 +53,9 @@ public class UIManager : MonoBehaviour
 
         if (_hubParent.childCount > 0)
             Destroy(_hubParent.GetChild(0).gameObject);
+
+        if (_mumParent.childCount > 0)
+            Destroy(_mumParent.GetChild(0).gameObject);
     }
 
     private void UpdateUI()
@@ -71,6 +79,19 @@ public class UIManager : MonoBehaviour
                 {
                     _story.ChooseChoiceIndex(choice.index);
                     Debug.Log("Go back to hub " + choice.index);
+                    UpdateUI();
+                });
+
+                continue;
+            }
+            else if (index == _mumButtonNumber)
+            {
+                ChoiceButton _mumb = Instantiate(_mumButton, _mumParent);
+
+                _mumb.Initialize(choice.text, () =>
+                {
+                    _story.ChooseChoiceIndex(choice.index);
+                    Debug.Log("Make up your mind " + choice.index);
                     UpdateUI();
                 });
 
@@ -102,6 +123,8 @@ public class UIManager : MonoBehaviour
     private void HandleTags()
     {
         _hubButtonNumber = -1;
+        _mumButtonNumber = -1;
+
         _tags = _story.currentTags;
 
         if (_tags.Count == 0)
@@ -128,6 +151,10 @@ public class UIManager : MonoBehaviour
                 case "hub":
                     _hubButtonNumber = int.Parse(split[1]);
                     Debug.Log("Hub button on " + _hubButtonNumber);
+                    break;
+                case "mum":
+                    _mumButtonNumber = int.Parse(split[1]);
+                    Debug.Log("mum button on " + _mumButtonNumber);
                     break;
                 default:
                     return;
