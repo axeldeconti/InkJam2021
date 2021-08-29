@@ -14,7 +14,7 @@
 (x) {x<1}
 
 === function get_back_from_park
-You head back to the street with in your mind the {word1()} of {word2()}.
+You leave the park and head back to the street with in your mind the {word1()} of {word2()}.
 
 === function word1
 {
@@ -30,6 +30,64 @@ You head back to the street with in your mind the {word1()} of {word2()}.
 }
 
 === function word2
+{
+- ideas == done_theme:<>{theme} 
+- else:
+    {
+    - ideas == done_memor:<>{memor}
+    - else: 
+        {
+        - ideas == done_feeli:<>{feeli}
+}
+}
+}
+
+=== function get_back_from_bookshop
+You smile at the salesperson before heading back to the street with in your mind the {word3()} of {word4()}.
+
+=== function word3
+{
+- ideas == done_theme:<>idea
+- else:
+    {
+    - ideas == done_memor:<>memory
+    - else:
+    {
+    - ideas == done_feeli:<>feeling
+}
+}
+}
+
+=== function word4
+{
+- ideas == done_theme:<>{theme} 
+- else:
+    {
+    - ideas == done_memor:<>{memor}
+    - else: 
+        {
+        - ideas == done_feeli:<>{feeli}
+}
+}
+}
+
+=== function get_back_from_museum
+You smile at the salesperson before heading back to the street with in your mind the {word5()} of {word6()}.
+
+=== function word5
+{
+- ideas == done_theme:<>idea
+- else:
+    {
+    - ideas == done_memor:<>memory
+    - else:
+    {
+    - ideas == done_feeli:<>feeling
+}
+}
+}
+
+=== function word6
 {
 - ideas == done_theme:<>{theme} 
 - else:
