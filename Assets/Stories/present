@@ -48,7 +48,7 @@ You decided to pick that {CD()} they'll surely like.
 === function experience
 {
 - type_feeli == joy:Taking them to a concert will help you express all the joy you felt during this day.
-You feel like listening some {concert()}.
+You feel like listening to some {concert()}.
 - else:
     {
     - type_feeli == sadness:Maybe because you feel needing confort from the sadness you felt today, you may invite them to a meal in a fancy restaurant.
