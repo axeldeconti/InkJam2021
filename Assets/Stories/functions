@@ -24,7 +24,7 @@
         }
 
 === function get_back_from_park
-You leave the park and head back to the street with in your mind the {word1()} of {word2()}.
+You leave the park and head back to the street with in your mind the <b>{word1()}</b> of <b>{word2()}</b>.
 
 === function word1
 {
@@ -53,7 +53,7 @@ You leave the park and head back to the street with in your mind the {word1()} o
 }
 
 === function get_back_from_bookshop
-You smile at the salesperson before heading back to the street with in your mind the {word3()} of {word4()}.
+You smile at the salesperson before heading back to the street with in your mind the <b>{word3()}</b> of <b>{word4()}</b>.
 
 === function word3
 {
@@ -82,7 +82,7 @@ You smile at the salesperson before heading back to the street with in your mind
 }
 
 === function get_back_from_museum
-You smile at the salesperson before heading back to the street with in your mind the {word5()} of {word6()}.
+You smile at the salesperson before heading back to the street with in your mind the <b>{word5()}</b> of <b>{word6()}</b>.
 
 === function word5
 {
