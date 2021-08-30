@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Transform _mumParent;
 
     [Header("Prefabs")]
+    [SerializeField] private GiftMapping _giftMapping;
     [SerializeField] private ChoiceButton _choiceButton;
     [SerializeField] private HubButton _hubButton;
     [SerializeField] private ChoiceButton _mumButton;
@@ -163,9 +164,31 @@ public class UIManager : MonoBehaviour
                     _mumButtonNumber = int.Parse(split[1]);
                     Debug.Log("mum button on " + _mumButtonNumber);
                     break;
+                case "gift":
+                    Debug.Log("Gift = " + split[1]);
+                    HandleGift(split[1]);
+                    break;
                 default:
                     return;
             }
         }
+    }
+
+    private void HandleGift(string gift)
+    {
+        if(_giftMapping.Contains(gift))
+        {
+            AudioClip clip = _giftMapping.Get(gift);
+
+            if (clip != null)
+                SFXManager.Instance.Play(clip);
+        }
+
+        ChoiceButton cb = Instantiate(_choiceButton, _buttonsParent);
+
+        cb.Initialize("Main menu", () =>
+        {
+            SceneManager.LoadScene("Menu");
+        });
     }
 }

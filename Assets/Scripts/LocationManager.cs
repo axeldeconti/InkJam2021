@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class LocationManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource _audio;
-
     [Header("Images")]
     [SerializeField] private Image _background;
     [SerializeField] private Image _blur;
@@ -16,23 +14,16 @@ public class LocationManager : MonoBehaviour
     [SerializeField] private Location _park;
     [SerializeField] private Location _bookshop;
 
-    private string _currentLocation = string.Empty;
+    private string _currentLocation = "street";
 
     private void Start()
     {
-        //_background.sprite = _street.sprite;
-        //Instantiate(_street.prefabs, _background.transform);
         _blur.gameObject.SetActive(false);
     }
 
     public void ChangeLocation(string loc)
     {
         Debug.Log("Change to location " + loc);
-
-        if (_currentLocation == loc)
-            return;
-        else
-            _currentLocation = loc;
 
         if (_background.transform.childCount > 0)
             Destroy(_background.transform.GetChild(0).gameObject);
@@ -59,8 +50,13 @@ public class LocationManager : MonoBehaviour
 
         _background.sprite = location.sprite;
         Instantiate(location.prefabs, _background.transform);
-        _audio.clip = location.clip;
-        _audio.Play();
+
+        if (_currentLocation == loc)
+            return;
+        else
+            _currentLocation = loc;
+
+        MusicManager.Instance.Play(location.clip);
     }
 }
 
