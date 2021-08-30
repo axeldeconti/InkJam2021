@@ -23,6 +23,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private HubButton _hubButton;
     [SerializeField] private ChoiceButton _mumButton;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip _footsteps;
+    [SerializeField] private AudioClip _emotionChoice;
+
     private Story _story;
 
     private List<string> _tags;
@@ -146,15 +150,19 @@ public class UIManager : MonoBehaviour
             {
                 case "loc":
                     _loc.ChangeLocation(split[1]);
+                    SFXManager.Instance.Play(_footsteps);
                     break;
                 case "thm":
                     Debug.Log(split[0] + " - " + split[1]);
+                    SFXManager.Instance.Play(_emotionChoice);
                     break;
                 case "fel":
                     Debug.Log(split[0] + " - " + split[1]);
+                    SFXManager.Instance.Play(_emotionChoice);
                     break;
                 case "mem":
                     Debug.Log(split[0] + " - " + split[1]);
+                    SFXManager.Instance.Play(_emotionChoice);
                     break;
                 case "hub":
                     _hubButtonNumber = int.Parse(split[1]);

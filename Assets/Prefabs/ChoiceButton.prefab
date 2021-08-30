@@ -274,7 +274,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8808527539092524082}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1960780123996901703}
+        m_TargetAssemblyTypeName: ChoiceButton, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1960780123996901703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +307,9 @@ MonoBehaviour:
   _openEase: 7
   _closeTime: 0.2
   _closeEase: 7
+  _SFXOpen: {fileID: 8300000, guid: 4a1f767559f0df94792c368874718ecd, type: 3}
+  _SFXClose: {fileID: 8300000, guid: 302d97189b40499418d71625f09b11cf, type: 3}
+  _click: {fileID: 8300000, guid: 53dcea599398f324c90a5f5be947b8df, type: 3}
 --- !u!114 &8440384079746512024
 MonoBehaviour:
   m_ObjectHideFlags: 0

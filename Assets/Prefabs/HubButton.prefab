@@ -125,7 +125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8808527539092524082}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2344786933533223044}
+        m_TargetAssemblyTypeName: HubButton, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8440384079746512024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 439630539290231246}
   _anim: {fileID: 8822008781319868474}
+  _click: {fileID: 8300000, guid: 53dcea599398f324c90a5f5be947b8df, type: 3}
 --- !u!95 &8822008781319868474
 Animator:
   serializedVersion: 3

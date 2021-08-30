@@ -266,6 +266,8 @@ MonoBehaviour:
   _choiceButton: {fileID: 1960780123996901703, guid: e1af8214aff00ec45b0a637271771810, type: 3}
   _hubButton: {fileID: 2344786933533223044, guid: e910659d46bb1dd498c4e62de99bdca5, type: 3}
   _mumButton: {fileID: 1960780123996901703, guid: 4c8a935055249944eabffc5af5cdbffd, type: 3}
+  _footsteps: {fileID: 8300000, guid: 1e60924055cb7114d9299a66a28cf355, type: 3}
+  _emotionChoice: {fileID: 8300000, guid: 8da6e5924f4be0d40b3d6df7cc2e81ad, type: 3}
 --- !u!114 &7482415802491495210
 MonoBehaviour:
   m_ObjectHideFlags: 0

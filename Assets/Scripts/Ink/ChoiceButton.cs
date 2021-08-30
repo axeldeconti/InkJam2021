@@ -20,6 +20,11 @@ public class ChoiceButton : MonoBehaviour
     [SerializeField] private float _closeTime = 1;
     [SerializeField] private Ease _closeEase = Ease.OutBounce;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip _SFXOpen;
+    [SerializeField] private AudioClip _SFXClose;
+    [SerializeField] private AudioClip _click;
+
     private TweenerCore<float, float, FloatOptions> _tween;
 
     public void Initialize(string text, ChoiceDelegate callback)
@@ -39,6 +44,8 @@ public class ChoiceButton : MonoBehaviour
             _tween.Kill();
 
         _tween = _image.DOFillAmount(1, _openTime).SetEase(_openEase);
+
+        SFXManager.Instance.Play(_SFXOpen);
     }
 
     public void OnPointerExit()
@@ -48,5 +55,12 @@ public class ChoiceButton : MonoBehaviour
             _tween.Kill();
 
         _tween = _image.DOFillAmount(0, _closeTime).SetEase(_closeEase);
+
+        SFXManager.Instance.Play(_SFXClose);
+    }
+
+    public void PlayClickSound()
+    {
+        SFXManager.Instance.Play(_click);
     }
 }
