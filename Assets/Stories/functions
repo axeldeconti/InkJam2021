@@ -13,6 +13,16 @@
 === function visited(x)
 (x) {x<1}
 
+=== function hub_button
+{
+        - (saw_theme == yes && saw_feeli == yes) || (saw_theme == yes && saw_memor == yes) || (saw_memor == yes && saw_feeli == yes):#hub[2]
+        - else:
+        {
+        - saw_theme == yes || saw_memor == yes || saw_feeli == yes:#hub[3]
+        - else:#hub[4]
+        }
+        }
+
 === function get_back_from_park
 You leave the park and head back to the street with in your mind the {word1()} of {word2()}.
 

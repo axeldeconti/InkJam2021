@@ -22,8 +22,8 @@ VAR saw_feeli = no
 ===park2===
 The weather is nice, the wind {|still} blows through the trees. On the grass, people {are|keep} playing a nice guitar tune. In the sky, {a pair of birds is flying by|the birds are leaving above the trees}.
 #hub[4] #loc[park]
-    * [Look at the trees]
-        The wind blowing in the tree reminds you to nature and brings up some joyful memories about a lazy sunday you spent together. #hub[4]
+    + [Look at the trees]
+        The wind blowing in the tree reminds you to nature and brings up some joyful memories about a lazy sunday you spent together. {hub_button()}
         
             ** {saw_theme == no} [Think about nature] 
             
@@ -48,11 +48,11 @@ The weather is nice, the wind {|still} blows through the trees. On the grass, pe
             ++ [Look at something else] -> park2
             
             -- {get_back_from_park()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
             
-    * [Listen to the tune]
-        As you listen to the song the people are playing on the guitar, you feel culturally involved but the tune reminds you of a sad moment when you had to say goodbye. #hub[4]
+    + [Listen to the tune]
+        As you listen to the song the people are playing on the guitar, you feel culturally involved but the tune reminds you of a sad moment when you had to say goodbye. {hub_button()}
         
             ** {saw_theme == no} [Enjoy the song]
             
@@ -77,12 +77,12 @@ The weather is nice, the wind {|still} blows through the trees. On the grass, pe
             ++ [Stop listening] -> park2
             
             -- {get_back_from_park()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
             
             
-    * [Watch the birds fly]
-        While you follow with your eyes the birds flapping to the setting sun, you think about when you first encounter during a trip and this memory brings back a tender feeling. #hub[4]
+    + [Watch the birds fly]
+        While you follow with your eyes the birds flapping to the setting sun, you think about when you first encounter during a trip and this memory brings back a tender feeling. {hub_button()}
         
             ** {saw_theme == no} [Think about travel]
             
@@ -107,7 +107,7 @@ The weather is nice, the wind {|still} blows through the trees. On the grass, pe
             ++ [Watch something else] -> park2
             
             -- {get_back_from_park()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
             
             
@@ -125,8 +125,8 @@ The weather is nice, the wind {|still} blows through the trees. On the grass, pe
 ===bookshop2===
 Your eyes {stop on|go back to} {different|the same} items, {like | }{a|the} bird dictionary, {a|the} poster with a cat and {a|the} travel guide.
 #hub[4] #loc[bookshop]
-    * [Pick up the dictionary] 
-        On the cover of the dictionary you can see a golden eagle taking off. This powerful natural scene brings to your mind the time you first met, and a bit of nostalgia. #hub[4]
+    + [Pick up the dictionary] 
+        On the cover of the dictionary you can see a golden eagle taking off. This powerful natural scene brings to your mind the time you first met, and a bit of nostalgia. {hub_button()}
         
             ** {saw_theme == no} [Think about the mighty eagle]
         
@@ -151,13 +151,13 @@ Your eyes {stop on|go back to} {different|the same} items, {like | }{a|the} bird
             ++ [Put the dictionary down] -> bookshop2
         
             -- {get_back_from_bookshop()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
         
         
         
-    * [Look at the poster]
-        The poster shows a cat napping cuddled up to a person reading a book on a couch. This cosy scene reminds you of a lazy sunday you spent together and fills you with tenderness. #hub[4]
+    + [Look at the poster]
+        The poster shows a cat napping cuddled up to a person reading a book on a couch. This cosy scene reminds you of a lazy sunday you spent together and fills you with tenderness. {hub_button()}
         
             ** {saw_theme == no} [Think about reading]
         
@@ -182,11 +182,11 @@ Your eyes {stop on|go back to} {different|the same} items, {like | }{a|the} bird
             ++ [Look at something else] -> bookshop2
             
             -- {get_back_from_bookshop()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
     
-    * [Flip through the travel guide]
-        The travel guide lead you through a country you two already visited. Seeing all these pictures of remote places you've been brings you to this travel and how happy you two felt. #hub[4]
+    + [Flip through the travel guide]
+        The travel guide lead you through a country you two already visited. Seeing all these pictures of remote places you've been brings you to this travel and how happy you two felt. {hub_button()}
         
             ** {saw_theme == no} [Dream about traveling]
         
@@ -211,7 +211,7 @@ Your eyes {stop on|go back to} {different|the same} items, {like | }{a|the} bird
             ++ [Put the book down] -> bookshop2
         
             -- {get_back_from_bookshop()} 
-                +++ Continue
+                +++ [Continue]
                 -> hub
     
     + [Head back to the street]
@@ -227,8 +227,8 @@ Your eyes {stop on|go back to} {different|the same} items, {like | }{a|the} bird
 ===museum2===
 As you wander about, {you can see some|your eyes stop on the} beautiful paintings and {|the }nice statues{.| again.} {Your eyes get caught by a visitor|The visitor is still there}.
 #hub[4] #loc[museum]
-    * [Gaze at the paintings]
-        On one of the paintings you can see natural landscapes with some people stepping on a boat. It reminds you of when you had to take a train early and brings back all the tenderness of that time. #hub[4]
+    + [Gaze at the paintings]
+        On one of the paintings you can see natural landscapes with some people stepping on a boat. It reminds you of when you had to take a train early and brings back all the tenderness of that time. {hub_button()}
     
             ** {saw_theme == no} [Plunge into the beauty of the trees]
         
@@ -253,12 +253,12 @@ As you wander about, {you can see some|your eyes stop on the} beautiful painting
             ++ [Look at something else] -> museum2
             
             -- {get_back_from_museum()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
             
         
-    * [Admire the statues]
-        Your eyes stop at a statue of two characters hugging. This fine piece of art brings you back to the day you first met and fills you with joy. #hub[4]
+    + [Admire the statues]
+        Your eyes stop at a statue of two characters hugging. This fine piece of art brings you back to the day you first met and fills you with joy. {hub_button()}
         
             ** {saw_theme == no} [Think about art]
         
@@ -283,12 +283,12 @@ As you wander about, {you can see some|your eyes stop on the} beautiful painting
             ++ [Keep on visiting] -> museum2
             
             -- {get_back_from_museum()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
             
     
-    * [Look at the visitor]
-        In front of a painting, you can see an old visitor sitting on a bench, absorbed in the look of a sad scene. The person looks like a traveler and reminds you of your lonely sunday walks. #hub[4]
+    + [Look at the visitor]
+        In front of a painting, you can see an old visitor sitting on a bench, absorbed in the look of a sad scene. The person looks like a traveler and reminds you of your lonely sunday walks. {hub_button()}
         
             ** {saw_theme == no} [Imagine their trip]
         
@@ -313,7 +313,7 @@ As you wander about, {you can see some|your eyes stop on the} beautiful painting
             ++ [Leave them alone] -> museum2
             
             -- {get_back_from_museum()}
-                +++ Continue
+                +++ [Continue]
                 -> hub
     
     + [Head back to the street]
