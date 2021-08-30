@@ -3,7 +3,7 @@ INCLUDE variables
 INCLUDE functions
 INCLUDE present
 
-Your special one's birthday is coming. You have to pick a present for them, but you haven't any clue yet. You should go out and find out. You'll eventually think of something. 
+Your special one's birthday is coming. You have to pick a present for them, but you haven't any clue yet. You should go out and find out. You'll eventually think of something. #loc[street]
 * [Go out for a walk] -> hub
 
 === hub ===

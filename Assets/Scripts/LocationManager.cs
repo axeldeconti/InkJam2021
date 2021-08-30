@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class LocationManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource _audio;
+
     [Header("Images")]
     [SerializeField] private Image _background;
     [SerializeField] private Image _blur;
@@ -14,10 +16,12 @@ public class LocationManager : MonoBehaviour
     [SerializeField] private Location _park;
     [SerializeField] private Location _bookshop;
 
+    private string _currentLocation = string.Empty;
+
     private void Start()
     {
-        _background.sprite = _street.sprite;
-        Instantiate(_street.prefabs, _background.transform);
+        //_background.sprite = _street.sprite;
+        //Instantiate(_street.prefabs, _background.transform);
         _blur.gameObject.SetActive(false);
     }
 
@@ -25,30 +29,38 @@ public class LocationManager : MonoBehaviour
     {
         Debug.Log("Change to location " + loc);
 
+        if (_currentLocation == loc)
+            return;
+        else
+            _currentLocation = loc;
+
         if (_background.transform.childCount > 0)
             Destroy(_background.transform.GetChild(0).gameObject);
+
+        Location location;
 
         switch (loc)
         {
             case "street":
-                _background.sprite = _street.sprite;
-                Instantiate(_street.prefabs, _background.transform);
+                location = _street;
                 break;
             case "museum":
-                _background.sprite = _museum.sprite;
-                Instantiate(_museum.prefabs, _background.transform);
+                location = _museum;
                 break;
             case "park":
-                _background.sprite = _park.sprite;
-                Instantiate(_park.prefabs, _background.transform);
+                location = _park;
                 break;
             case "bookshop":
-                _background.sprite = _bookshop.sprite;
-                Instantiate(_bookshop.prefabs, _background.transform);
+                location = _bookshop;
                 break;
             default:
                 return;
         }
+
+        _background.sprite = location.sprite;
+        Instantiate(location.prefabs, _background.transform);
+        _audio.clip = location.clip;
+        _audio.Play();
     }
 }
 
