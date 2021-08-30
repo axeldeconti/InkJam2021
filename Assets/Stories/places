@@ -47,7 +47,7 @@ The weather is nice, the wind {|still} blows through the trees. On the grass, pe
             
             ++ [Look at something else] -> park2
             
-            -- {get_back_from_park()} -> hub
+            -- {get_back_from_park()}
                 +++ Continue
                 -> hub
             
@@ -76,7 +76,7 @@ The weather is nice, the wind {|still} blows through the trees. On the grass, pe
             
             ++ [Stop listening] -> park2
             
-            -- {get_back_from_park()} -> hub
+            -- {get_back_from_park()}
                 +++ Continue
                 -> hub
             
@@ -106,7 +106,7 @@ The weather is nice, the wind {|still} blows through the trees. On the grass, pe
             
             ++ [Watch something else] -> park2
             
-            -- {get_back_from_park()} -> hub
+            -- {get_back_from_park()}
                 +++ Continue
                 -> hub
             
@@ -150,7 +150,7 @@ Your eyes {stop on|go back to} {different|the same} items, {like | }{a|the} bird
         
             ++ [Put the dictionary down] -> bookshop2
         
-            -- {get_back_from_bookshop()} -> hub
+            -- {get_back_from_bookshop()}
                 +++ Continue
                 -> hub
         
@@ -181,7 +181,7 @@ Your eyes {stop on|go back to} {different|the same} items, {like | }{a|the} bird
             
             ++ [Look at something else] -> bookshop2
             
-            -- {get_back_from_bookshop()} -> hub
+            -- {get_back_from_bookshop()}
                 +++ Continue
                 -> hub
     
@@ -252,7 +252,7 @@ As you wander about, {you can see some|your eyes stop on the} beautiful painting
             
             ++ [Look at something else] -> museum2
             
-            -- {get_back_from_museum()} -> hub
+            -- {get_back_from_museum()}
                 +++ Continue
                 -> hub
             
@@ -282,7 +282,7 @@ As you wander about, {you can see some|your eyes stop on the} beautiful painting
             
             ++ [Keep on visiting] -> museum2
             
-            -- {get_back_from_museum()} -> hub
+            -- {get_back_from_museum()}
                 +++ Continue
                 -> hub
             
@@ -312,7 +312,7 @@ As you wander about, {you can see some|your eyes stop on the} beautiful painting
             
             ++ [Leave them alone] -> museum2
             
-            -- {get_back_from_museum()} -> hub
+            -- {get_back_from_museum()}
                 +++ Continue
                 -> hub
     

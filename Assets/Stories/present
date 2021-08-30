@@ -175,7 +175,7 @@ You feel like listening to some {concert()}.
     - type_memor == departure:<>pop rock#gift[pop_rock]
     - else:
         {
-        - type_memor == encounter:<>musical#gift[musical_concert]
+        - type_memor == encounter:<>jazz#gift[musical_concert]
 }
 }
 }
