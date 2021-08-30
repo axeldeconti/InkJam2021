@@ -189,7 +189,10 @@ public class UIManager : MonoBehaviour
             AudioClip clip = _giftMapping.Get(gift);
 
             if (clip != null)
-                SFXManager.Instance.Play(clip);
+            {
+                SFXManager.Instance.Play2(clip);
+                Debug.Log("Play gift sound " + clip.name);
+            }
         }
 
         ChoiceButton cb = Instantiate(_choiceButton, _buttonsParent);
