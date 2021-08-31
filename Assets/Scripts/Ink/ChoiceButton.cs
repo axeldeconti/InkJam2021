@@ -44,7 +44,7 @@ public class ChoiceButton : MonoBehaviour
 
         _tween = _image.DOFillAmount(1, _openTime).SetEase(_openEase);
 
-        SFXManager.Instance.Play(_SFXOpen);
+        SFXManager.Instance.Play2(_SFXOpen);
     }
 
     public void OnPointerExit()
@@ -54,7 +54,7 @@ public class ChoiceButton : MonoBehaviour
 
         _tween = _image.DOFillAmount(0, _closeTime).SetEase(_closeEase);
 
-        SFXManager.Instance.Play(_SFXClose);
+        SFXManager.Instance.Play2(_SFXClose);
     }
 
     public void PlayClickSound()

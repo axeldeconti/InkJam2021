@@ -190,7 +190,7 @@ public class UIManager : MonoBehaviour
 
             if (clip != null)
             {
-                SFXManager.Instance.Play2(clip);
+                SFXManager.Instance.Play(clip);
                 Debug.Log("Play gift sound " + clip.name);
             }
         }
