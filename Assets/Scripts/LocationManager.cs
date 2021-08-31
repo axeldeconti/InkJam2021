@@ -35,7 +35,7 @@ public class LocationManager : MonoBehaviour
         {
             case "street":
                 location = _street;
-                MusicManager.Instance.Volume = 0.5f;
+                MusicManager.Instance.Volume = 0.4f;
                 break;
             case "museum":
                 location = _museum;
