@@ -91,7 +91,7 @@ You feel like listening to some {concert()}.
 
 === function song
 {
-- type_memor == sunday:<>cozy#gift[cozy]
+- type_memor == sunday:<>cosy#gift[cozy]
 - else:
     {
     - type_memor == departure:<>dreamy#gift[dreamy]
