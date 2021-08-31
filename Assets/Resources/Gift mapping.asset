@@ -20,7 +20,7 @@ MonoBehaviour:
   - name: nostalgic
     clip: {fileID: 8300000, guid: 7c13b6a840fc7ef4d9d85a87827090a3, type: 3}
   - name: snow
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: d32abca2744ad704884e839784dcea24, type: 3}
   - name: rain
     clip: {fileID: 8300000, guid: e0da239adf78f7841ade4a91c99ce606, type: 3}
   - name: clouds
@@ -30,13 +30,13 @@ MonoBehaviour:
   - name: sushi
     clip: {fileID: 8300000, guid: 42eea61afa1491c4dab919d12ec3d5d2, type: 3}
   - name: hamburger
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: c725b2fc829e16c4d9c94f4a46c163fb, type: 3}
   - name: concept_album
     clip: {fileID: 8300000, guid: 9c90f92a990bc594b8c86e657ba4fbe4, type: 3}
   - name: greatest_hits
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1d49955e2b6458a4f8644de519bcdffa, type: 3}
   - name: vgm_cover
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9ad27e1aa5a8951479b22e756aeb0551, type: 3}
   - name: thriller
     clip: {fileID: 8300000, guid: 04deb106416927b4da65dad2070854f4, type: 3}
   - name: fantasy
@@ -44,17 +44,17 @@ MonoBehaviour:
   - name: poetry
     clip: {fileID: 8300000, guid: bc7f186413db84c4ea5d5bb3704d61c4, type: 3}
   - name: shark
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: bafc33c98e0a6cb4ca62cd05de3338cf, type: 3}
   - name: giraffe
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 15cccf930e8fa5742878c0d87be2223c, type: 3}
   - name: bear
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1addc20068bce3645aa006cc4ac797ba, type: 3}
   - name: folk_music
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 78ac64a34f4f2bb42a078ad431e43d76, type: 3}
   - name: pop_rock
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 07137b2bb1aac124aa7f1192e6482b13, type: 3}
   - name: musical_concert
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: b6e06e0066a6c8f46b6858a560992a65, type: 3}
   - name: brunch
     clip: {fileID: 8300000, guid: 272642e1e78ef154b83e91e988d0e781, type: 3}
   - name: lunch
@@ -66,4 +66,6 @@ MonoBehaviour:
   - name: somewhere_exciting
     clip: {fileID: 8300000, guid: e665074a86eaf8446aab8bea6d7a93b9, type: 3}
   - name: somewhere_romantic
+    clip: {fileID: 8300000, guid: c8944a314c31fa747bc61e65c2868c95, type: 3}
+  - name: qzd
     clip: {fileID: 8300000, guid: c8944a314c31fa747bc61e65c2868c95, type: 3}
