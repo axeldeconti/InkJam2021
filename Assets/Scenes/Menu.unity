@@ -491,6 +491,9 @@ MonoBehaviour:
   _openEase: 7
   _closeTime: 0.2
   _closeEase: 7
+  _SFXOpen: {fileID: 8300000, guid: 4a1f767559f0df94792c368874718ecd, type: 3}
+  _SFXClose: {fileID: 8300000, guid: 302d97189b40499418d71625f09b11cf, type: 3}
+  _click: {fileID: 8300000, guid: 53dcea599398f324c90a5f5be947b8df, type: 3}
 --- !u!114 &983816296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,7 +851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 229.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294785264
@@ -1541,6 +1544,9 @@ MonoBehaviour:
   _openEase: 7
   _closeTime: 0.2
   _closeEase: 7
+  _SFXOpen: {fileID: 8300000, guid: 4a1f767559f0df94792c368874718ecd, type: 3}
+  _SFXClose: {fileID: 8300000, guid: 302d97189b40499418d71625f09b11cf, type: 3}
+  _click: {fileID: 8300000, guid: 53dcea599398f324c90a5f5be947b8df, type: 3}
 --- !u!1 &6446525547175693062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1649,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 229.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
