@@ -16,4 +16,15 @@ public class MusicManager : Singleton<MusicManager>
         _audio.clip = clip;
         _audio.Play();
     }
+
+    public void Stop()
+    {
+        _audio.Stop();
+    }
+
+    public float Volume
+    {
+        get => _audio.volume;
+        set => _audio.volume = Mathf.Clamp01(value);
+    }
 }

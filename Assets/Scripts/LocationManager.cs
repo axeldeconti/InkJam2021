@@ -14,7 +14,7 @@ public class LocationManager : MonoBehaviour
     [SerializeField] private Location _park;
     [SerializeField] private Location _bookshop;
 
-    private string _currentLocation = "street";
+    private string _currentLocation = "";
 
     private void Start()
     {
@@ -29,11 +29,13 @@ public class LocationManager : MonoBehaviour
             Destroy(_background.transform.GetChild(0).gameObject);
 
         Location location;
+        MusicManager.Instance.Volume = 1;
 
         switch (loc)
         {
             case "street":
                 location = _street;
+                MusicManager.Instance.Volume = 0.5f;
                 break;
             case "museum":
                 location = _museum;

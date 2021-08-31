@@ -39,7 +39,6 @@ public class ChoiceButton : MonoBehaviour
 
     public void OnPointerEnter()
     {
-        //transform.localScale = 1.5f * Vector3.one;
         if (_tween != null && !_tween.IsComplete())
             _tween.Kill();
 
@@ -50,7 +49,6 @@ public class ChoiceButton : MonoBehaviour
 
     public void OnPointerExit()
     {
-        //transform.localScale = Vector3.one;
         if (_tween != null && !_tween.IsComplete())
             _tween.Kill();
 
@@ -62,5 +60,10 @@ public class ChoiceButton : MonoBehaviour
     public void PlayClickSound()
     {
         SFXManager.Instance.Play(_click);
+    }
+
+    public void MakeUpYourMind()
+    {
+        MusicManager.Instance.Stop();
     }
 }

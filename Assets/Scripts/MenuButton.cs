@@ -30,6 +30,11 @@ public class MenuButton : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     public void OnPointerEnter()
     {
         if (_tween != null && !_tween.IsComplete())
