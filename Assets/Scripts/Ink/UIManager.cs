@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     [Header("SFX")]
     [SerializeField] private AudioClip _footsteps;
     [SerializeField] private AudioClip _emotionChoice;
+    [SerializeField] private AudioClip _clic;
 
     private Story _story;
 
@@ -150,7 +151,7 @@ public class UIManager : MonoBehaviour
             {
                 case "loc":
                     _loc.ChangeLocation(split[1]);
-                    SFXManager.Instance.Play(_footsteps);
+                    SFXManager.Instance.Play(_clic);
                     break;
                 case "thm":
                     Debug.Log(split[0] + " - " + split[1]);
