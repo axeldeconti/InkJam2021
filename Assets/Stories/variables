@@ -3,3 +3,9 @@ VAR theme = ""
 VAR memor = ""
 
 VAR feeli = ""
+
+VAR PNsubject = ""
+
+VAR PNobject = ""
+
+VAR PNadject = ""

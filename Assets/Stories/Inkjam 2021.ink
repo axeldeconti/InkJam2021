@@ -3,7 +3,21 @@ INCLUDE variables
 INCLUDE functions
 INCLUDE present
 
-Your special one's birthday is coming. You have to pick a present for them, but you haven't any clue yet. You should go out and find out. You'll eventually think of something.
+Your special one's birthday is coming.
+* [He/him]
+~ PNsubject = "he"
+~ PNobject = "him"
+~ PNadject = "his"
+* [She/her]
+~ PNsubject = "she"
+~ PNobject = "her"
+~ PNadject = "her"
+* [They/them]
+~ PNsubject = "they"
+~ PNobject = "them"
+~ PNadject = "their"
+
+- You have to pick a present for {PNobject}, but you haven't any clue yet. You should go out and find out. You'll eventually think of something.
 * [Go out for a walk] -> hub
 
 === hub ===

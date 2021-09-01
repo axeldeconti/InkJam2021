@@ -5,12 +5,12 @@
 -> performance
 - else:
     {
-    - theme == "travel":You actually want to take them somewhere to enjoy a bit of a change of scene.
+    - theme == "travel":You actually want to take {PNobject} somewhere to enjoy a bit of a change of scene.
     * [Continue]
     -> experience
     - else:
         {
-        - theme == "culture": Seeing those cultural objects made you want to buy them something nice and meaningful.
+        - theme == "culture": Seeing those cultural objects made you want to buy {PNobject} something nice and meaningful.
         *[Continue]
         -> object
 }
@@ -19,21 +19,21 @@
 
 === performance===
 {
-- type_feeli == joy:You joyfully decided to learn a song to sing on their birthday.
+- type_feeli == joy:You joyfully decided to learn a song to sing on {PNadject} birthday.
 * [Continue]
 You'll play something {song()}.
 -> DONE
 - else:
     {
-    - type_feeli == sadness:Bringing back the sadness made you think it would be nice if you wrote them a poem.
+    - type_feeli == sadness:Bringing back the sadness made you think it would be nice if you wrote {PNobject} a poem.
     * [Continue]
     It shall be a poem including {poem()}.
     -> DONE
     - else:
         {
-        - type_feeli == tenderness:Experiencing tenderness led you to spoil them with something to cook.
+        - type_feeli == tenderness:Experiencing tenderness led you to spoil {PNobject} with something to cook.
         * [Continue]
-        You think you'll make them {cook()}
+        You think you'll make {PNobject} {cook()}
         -> DONE
 }
 }
@@ -43,19 +43,19 @@ You'll play something {song()}.
 
 === object ===
 {
-- type_feeli == joy:Why not dive back to the 2000's and take them a CD from that band they really like?
+- type_feeli == joy:Why not dive back to the 2000's and take {PNobject} a CD from that band {PNsubject} really like?
 * [Continue]
-You decided to pick that {CD()} they'll surely like.
+You decided to pick that {CD()} {PNsubject}'ll surely like.
 -> DONE
 - else:
     {
-    - type_feeli == sadness:Now is the time to make them discover that favorite melancholic author of yours.
+    - type_feeli == sadness:Now is the time to make {PNobject} discover that favorite melancholic author of yours.
     * [Continue]
-    Besides, you know they really like to read {book()}.
+    Besides, you know {PNsubject} really like to read {book()}.
     -> DONE
     - else:
         {
-        - type_feeli == tenderness:You want to express all that tenderness by finding a nice giant stuffed animal to complete their collection.
+        - type_feeli == tenderness:You want to express all that tenderness by finding a nice giant stuffed animal to complete {PNadject} collection.
         * [Continue]
         This time it'll be a {animal()}.
         -> DONE
@@ -67,19 +67,19 @@ You decided to pick that {CD()} they'll surely like.
 
 === experience ===
 {
-- type_feeli == joy:Taking them to a concert will help you express all the joy you felt during this day.
+- type_feeli == joy:Taking {PNobject} to a concert will help you express all the joy you felt during this day.
 * [Continue]
 You feel like listening to some {concert()}. 
 -> DONE
 - else:
     {
-    - type_feeli == sadness:Maybe because you feel needing confort from the sadness you felt today, you may invite them to a meal in a fancy restaurant.
+    - type_feeli == sadness:Maybe because you feel needing confort from the sadness you felt today, you may invite {PNobject} to a meal in a fancy restaurant.
     * [Continue]
-    You think they'll enjoy a nice {restaurant()}.
+    You think {PNsubject}'ll enjoy a nice {restaurant()}.
     -> DONE
     - else:
         {
-        - type_feeli == tenderness:You tenderly want to book a new trip with them and discover new things together.
+        - type_feeli == tenderness:You tenderly want to book a new trip with {PNobject} and discover new things together.
         * [Continue]
         After all you've been wanting to go {trip()} for a long time.
         -> DONE
